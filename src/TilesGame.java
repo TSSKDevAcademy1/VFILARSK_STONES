@@ -13,11 +13,9 @@ public class TilesGame {
 
 		Field field = new Field(5, 5);
 		BestTimes bestTimes = new BestTimes();
-
 		FieldLoader fLoader = new FieldLoader();
-	//	ConsoleUI ui = new ConsoleUI(bestTimes, fLoader);
-
-		 ConsoleUI ui = new ConsoleUI(field,bestTimes,fLoader);
+		// ConsoleUI ui = new ConsoleUI(bestTimes, fLoader);
+		ConsoleUI ui = new ConsoleUI(field, bestTimes, fLoader);
 
 	}
 

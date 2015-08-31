@@ -50,9 +50,9 @@ public class Field implements Serializable {
 	}
 
 	public Tile[][] generate() {
-		List<Integer> listOfIntegers = new ArrayList<>(); 
-		int totalCount = rowCount*columnCount;
-		for(int j = 1; j< totalCount;j++){
+		List<Integer> listOfIntegers = new ArrayList<>();
+		int totalCount = rowCount * columnCount;
+		for (int j = 1; j < totalCount; j++) {
 			listOfIntegers.add(j);
 		}
 		listOfIntegers.add(99);
@@ -60,8 +60,8 @@ public class Field implements Serializable {
 		int randomValueNumber = 0;
 		for (int r = 0; r < rowCount; r++) {
 			for (int c = 0; c < columnCount; c++) {
-				field[r][c] = new Clue(r, c, listOfIntegers.get(listOfIntegers.size()-1));
-				listOfIntegers.remove(listOfIntegers.size()-1);
+				field[r][c] = new Clue(r, c, listOfIntegers.get(listOfIntegers.size() - 1));
+				listOfIntegers.remove(listOfIntegers.size() - 1);
 				actualColumnCount++;
 			}
 		}
@@ -80,22 +80,21 @@ public class Field implements Serializable {
 			System.out.printf("\n");
 		}
 	}
-	
-	public int getColumnCount(){
+
+	public int getColumnCount() {
 		return columnCount;
 	}
-	
-	public int getRowCount(){
+
+	public int getRowCount() {
 		return rowCount;
 	}
-	
-	public Tile getTile(int row,int column){
+
+	public Tile getTile(int row, int column) {
 		return field[row][column];
 	}
-	
-	public void setTile(int row,int column,int value){
-		field[row][column] = new Clue(row,column,value);
+
+	public void setTile(int row, int column, int value) {
+		field[row][column] = new Clue(row, column, value);
 	}
-	
-	
+
 }
